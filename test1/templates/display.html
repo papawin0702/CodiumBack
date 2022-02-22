@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Details</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for Post in Posts %}
+            <tr>
+            <th scope="row">{{Post.id}}</th>
+            <td>{{Post.name}}</td>
+            <td>{{Post.detail}}</td>
+            <td><a class="nav-link" href="{% url 'blogs_edit' Post.id %}">Edit</a></td>
+            <td><a class="nav-link" href="{% url 'blogs_delete' Post.id %}">Delete</a></td>
+          </tr>
+        {% endfor%}
+        </tbody>
+  </table>
+
+
+{% endblock %}
