@@ -2,20 +2,14 @@
 
 
 {% block content %}
-<h2>ชื่อบทความ : {{ name }}</h2>
-<h2>ผู้แต่ง : {{author}}</h2>
+<h2>{{ name }}</h2>
 
-<h2>ป้ายกำกับ</h2>
+<h2>Make By</h2>
 
 <ul>   
     {% for tag in tags %} 
     <li>{{tag}}</li>
     {% endfor %}
 </ul>
-<h2>ระดับความนิยม</h2>
-{% if rating > 3 %}
-    <h3>ดีมาก</h3>
-{% else %}
-    <h3>บ่ได้ค๊ะ..</h3>
-{% endif %}
+
 {% endblock %}

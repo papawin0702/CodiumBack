@@ -6,14 +6,14 @@ from blogs.form import PostModelForm
 
 # Create your views here.
 def hello(request):
-    tags=['วารี','เพลิง']
-    rating=4
+    tags=['Papawin','Sangwanteera','Software Engineering']
+    #rating=4
     return render(request,'index.html',
     {
-        'name':'HutaoC1',
-        'author':'PapawinFlash',
+        'name':'Hello World',
+        #'author':'PapawinFlash',
         'tags' :tags,
-        'rating' : rating,
+        #'rating' : rating,
     })
 
 def display(request):
